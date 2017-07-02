@@ -1,0 +1,46 @@
+{% extends "_base.html" %} {% block content %}
+
+<div class="body-content">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Welcome!</h1>
+            <hr />
+            <p>
+                Latex formatter is a formatter for your latex code. Enter your code in the text area below and click on the button <strong>Format</strong>, if you prefer to upload your file, just click on the button <strong>choose a file </strong> and click on the button <strong>Format</strong>.
+            </p>
+
+            <p>
+                Insert your code below or upload a latex file
+                <form enctype="multipart/form-data" method="post" name="fileinfo">
+                    <input class="btn btn-default btn-file" type="file" name="file" id="file" style="float:left; margin-right: 10px;">
+                    <input class="btn btn-primary" type="submit" value="Upload" />
+                </form>
+            </p>
+            <textarea class="form-control" rows="15" id="latexcode"></textarea>
+            <button type="button" id="formatbutton" class="btn btn-primary">Format</button>
+        </div>
+        <div class="col-md-4">
+            <h1> Formatting Options </h1>
+            <hr />
+            <div class="form-group">
+                <select class="form-control" id="numberof" name="numberof">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="options" value="spaces" id="spaces" autocomplete="off" checked> Spaces
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" value="tabs" id="tabs" autocomplete="off"> Tabs
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8" id="result"></div>
+    </div>
+</div>
+
+{% endblock %}

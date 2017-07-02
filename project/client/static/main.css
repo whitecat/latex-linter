@@ -1,0 +1,33 @@
+/* custom css */
+
+.site-content {
+  padding-top: 75px;
+}
+
+.navbar-default {
+    background-color: #ed786a;
+}
+
+.btn-primary {
+    background-color: #ed786a;
+    border-color: #ed786a;
+}
+.navbar-brand {
+    font-weight: bold;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+#formatbutton {
+  margin-top: 10px;
+}
+
+#result {
+  margin-top:10px;
+}
+
+hr {
+  border-top: 1px solid #BDBDBD;
+}
