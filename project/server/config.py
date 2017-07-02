@@ -39,5 +39,6 @@ class ProductionConfig(BaseConfig):
     """Production configuration."""
     SECRET_KEY = 'my_precious'
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/example'
+    SQLALCHEMY_DATABASE_URI = 'postgres:///meal_planner'
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', "postgres:///meal_planner")
     DEBUG_TB_ENABLED = False
