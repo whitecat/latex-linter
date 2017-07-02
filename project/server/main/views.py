@@ -7,7 +7,7 @@
 
 from flask import render_template, Blueprint, request
 import json
-from handlers import handle_latex_text, handle_latex_file
+from .handlers import handle_latex_text, handle_latex_file
 
 ################
 #### config ####
