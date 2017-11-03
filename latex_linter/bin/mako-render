@@ -1,4 +1,4 @@
-#!/home/rodrigo/Dropbox/Projects/latex_linter/latex_linter/bin/python3.6
+#!/home/rodrigo/Dropbox/Projects/latex_linter/latex_linter/bin/python
 
 # -*- coding: utf-8 -*-
 import re
