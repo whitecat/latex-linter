@@ -29,7 +29,6 @@ app = Flask(
 app_settings = os.getenv('APP_SETTINGS', 'project.server.config.ProductionConfig')
 app.config.from_object(app_settings)
 
-import pdb; pdb.set_trace()
 ####################
 #### extensions ####
 ####################

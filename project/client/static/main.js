@@ -15,11 +15,17 @@ var renderResponse = function(data) {
 }
 
 $("#formatbutton").click(function() {
-
-    var latex_data = $('#latexcode').val();
-    $.post("/format/", {
-        latex_data: latex_data
-    }, renderResponse);
+    
+     var spacesOrTab = $('input[name="options"]:checked').val();
+ 
+     var numberOf = $('#numberof').val();
+     var latex_data = $('#latexcode').val();
+     $.post("/format/", {
+         latex_data: latex_data,
+         spaces_or_tabs: spacesOrTab,
+         number_of: numberOf
+     }, renderResponse);
+    
 });
 
 $("#result").click(function() {

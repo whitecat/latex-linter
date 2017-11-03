@@ -12,10 +12,13 @@ import json
 import uuid
 import os
 import subprocess
+import logging
 
 # Global variables (disguting, I know)
-latex_file_path = '{}/{}'.format(os.getcwd(), 'project/server/files/')
-perl_script_path = '{}/{}'.format(os.getcwd(), 'project/server/dependencies/latexindent.pl-master/latexindent.pl')
+# TODO: make it dynamic. I had to put /var/www here because of apache, which is quite annoying
+# NOTE: If running locally and not using apache at all, change this path to make it work
+latex_file_path = '/var/www/latex-linter/project/server/files/'
+perl_script_path = '/var/www/latex-linter/project/server/dependencies/latexindent.pl-master/latexindent.pl'
 
 def _generate_unique_id():
     return str(uuid.uuid4())
@@ -47,7 +50,8 @@ def handle_latex_text(latex_text, options):
     # TODO: script to install dependencies - Unicode::GCString and File::HomeDir
 
     latex_file = _write_to_file(latex_text)
-
+    
+    print latex_file
     # latex_file[0] == UUID & latex_file[1] == file_path
     output = _run_perl_script(latex_file[1])
 
