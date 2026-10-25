@@ -1,4 +1,0 @@
-
-modifyLineBreaks:
-    environments:
-        BodyStartsOnOwnLine: -1

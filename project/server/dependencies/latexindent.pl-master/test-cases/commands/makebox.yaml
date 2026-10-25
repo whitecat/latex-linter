@@ -1,7 +1,0 @@
-modifyLineBreaks:
-    optionalArguments:
-        makebox:
-            LSqBStartsOnOwnLine: 2
-            OptArgBodyStartsOnOwnLine: 2
-            RSqBStartsOnOwnLine: 2
-            RSqBFinishesWithLineBreak: 2

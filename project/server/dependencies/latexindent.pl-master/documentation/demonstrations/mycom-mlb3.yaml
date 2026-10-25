@@ -1,5 +1,0 @@
-modifyLineBreaks:
-    commands:
-        CommandNameFinishesWithLineBreak: -1
-    mandatoryArguments:
-        LCuBStartsOnOwnLine: 1

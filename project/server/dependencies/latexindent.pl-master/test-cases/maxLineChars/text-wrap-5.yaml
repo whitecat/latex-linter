@@ -1,4 +1,0 @@
-modifyLineBreaks:
-    textWrapOptions:
-        columns: 3
-        separator: "|"

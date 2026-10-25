@@ -1,3 +1,0 @@
-modifyLineBreaks:
-    environments:
-        EndStartsOnOwnLine: -1

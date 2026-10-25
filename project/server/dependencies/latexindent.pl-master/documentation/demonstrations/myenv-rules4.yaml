@@ -1,4 +1,0 @@
-indentRules:
-    myenv: 
-        body: "   "
-        mandatoryArguments: "\t\t"

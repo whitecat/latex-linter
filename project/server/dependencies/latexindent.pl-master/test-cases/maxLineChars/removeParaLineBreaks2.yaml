@@ -1,5 +1,0 @@
-modifyLineBreaks:
-    removeParagraphLineBreaks:
-        all: 0
-        environments: 
-            quotation: 1

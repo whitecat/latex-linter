@@ -1,3 +1,0 @@
-modifyLineBreaks:
-    commands:
-        CommandNameFinishesWithLineBreak: -1

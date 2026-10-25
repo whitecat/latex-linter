@@ -1,6 +1,0 @@
-modifyLineBreaks:
-    ifElseFi:
-        IfStartsOnOwnLine: -1
-logFilePreferences:
-    showEveryYamlRead: 1
-    showAmalgamatedSettings: 1

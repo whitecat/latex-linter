@@ -1,3 +1,0 @@
-modifyLineBreaks:
-    environments:
-        EndFinishesWithLineBreak: 2

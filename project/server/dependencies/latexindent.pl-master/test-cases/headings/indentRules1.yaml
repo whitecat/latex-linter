@@ -1,5 +1,0 @@
-indentRules:
-   chapter: 
-        optionalArguments: "\t"
-        mandatoryArguments: "\t\t"
-        afterHeading: "  "

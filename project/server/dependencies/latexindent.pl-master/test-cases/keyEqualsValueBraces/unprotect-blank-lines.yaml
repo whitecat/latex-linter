@@ -1,5 +1,0 @@
-modifyLineBreaks:
-    preserveBlankLines: 0
-removeTrailingWhitespace:
-    beforeProcessing: 1
-    afterProcessing: 1
