@@ -6,7 +6,7 @@ import re
 import subprocess
 import tempfile
 
-from flask import Blueprint, Flask, Response, abort, render_template, request
+from flask import Blueprint, Flask, Response, abort, redirect, render_template, request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LATEXINDENT = os.path.join(HERE, "latexindent", "latexindent.pl")
@@ -24,6 +24,16 @@ app.config["MAX_CONTENT_LENGTH"] = 5 * 1024 * 1024
 
 # The templates use url_for("main.home") and url_for("main.about")
 main = Blueprint("main", __name__)
+
+
+@app.before_request
+def drop_www():
+    # www.<site> redirects permanently to <site>, keeping the path and query.
+    # 308 for POSTs so the form data survives; browsers turn a 301 POST into a GET.
+    host = request.host
+    if host.lower().startswith("www."):
+        url = "https://" + host[4:] + request.full_path.rstrip("?")
+        return redirect(url, code=301 if request.method in ("GET", "HEAD") else 308)
 
 
 def _flag(form, name, default=False):

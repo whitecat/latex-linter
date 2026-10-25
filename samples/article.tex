@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\note}[1]{%
+\textbf{Note:} #1}
+\title{A Sample Article for the Latex Formatter}
+\author{Test Author}
+\begin{document}
+\maketitle
+\section{Introduction}
+This paragraph is one very long line, so it is a good test for wrapping at 60, 72 or 80 characters. It also has several sentences. Each of them should land on its own line when that option is on! Does a question mark end a sentence too? It should.
+This line continues the same paragraph after a single line break.
+
+
+
+The three blank lines above should collapse into one when that option is on.
+\subsection{Lists}
+\begin{itemize}
+\item First item
+\item Second item with a nested list
+\begin{enumerate}
+\item Nested one
+\item Nested two % a trailing comment that wrapping may move
+\end{enumerate}
+\item Third item
+\end{itemize}
+\section{A figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{example-image}
+\caption{A caption {with braces} inside}
+\label{fig:example}
+\end{figure}
+\note{Text under a heading is indented when ``Indent text under section headings'' is on.}
+\end{document}

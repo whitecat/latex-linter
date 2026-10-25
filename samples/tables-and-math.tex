@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\section{Tables}
+% Columns are deliberately ragged so "Align table and equation columns at &" has work to do
+\begin{tabular}{lcr}
+Name & Value & Unit\\
+Speed of light & 299792458 & m/s\\
+g & 9.81 & m/s$^2$\\
+\hline
+Planck constant & $6.626\times10^{-34}$ & J s
+\end{tabular}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+a & bb\\ \hline
+cccccc & d\\ \hline
+\end{tabular}
+\caption{A table inside a table environment}
+\end{table}
+\section{Math}
+\begin{align}
+f(x) &= x^2+2x+1\\
+&= (x+1)^2
+\end{align}
+\begin{equation}
+A=\begin{pmatrix}
+1 & 22 & 333\\
+4444 & 5 & 66
+\end{pmatrix}
+\end{equation}
+\[
+|x|=\begin{cases}
+x & x\geq 0\\
+-x & x<0
+\end{cases}
+\]
+\begin{verbatim}
+  verbatim   text   is never   touched
+\end{verbatim}
+\end{document}
